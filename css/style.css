@@ -8,10 +8,11 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
     padding: 20px 40px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 .navbar a {
     text-decoration: none;
@@ -22,26 +23,51 @@ body {
 .navbar a.join-us {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 7px 20px;
     border-radius: 5px;
+   
 }
 .navbar .nav-links {
     display: flex;
+    align-items: center;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.navbar .toggle-button {
+    display: none;
+    align-items: center;
+    transition: max-height 0.3s ease-in-out;
+    
+}
+.navbar .toggle-button .bar {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+   
+}
+.navbar .toggle-button:focus {
+    outline: none;
 }
 
 /* Hero Section */
 .hero {
-    background-image: linear-gradient(to top, #2C5ED8 0%, #1F44B5 100%);
+    background-image: linear-gradient(to top, #2C5ED8 0%, #11349c 100%);
     color: white;
     padding: 80px 20px;
     display: flex;
-    justify-content: center; /* Align items closer */
+    justify-content: center; 
     align-items: center;
-   gap: 20px; /* Space between text and code container */
+   gap: 20px; 
     flex-wrap: wrap;
 }
 .hero-text {
-    max-width: 45%; /* Reduced width for better alignment */
+    max-width: 45%; 
     margin-bottom: 0;
 }
 .hero h1 {
@@ -82,8 +108,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0.1, 0, 0.1);
-    max-width: 45%; /* Reduced width for better alignment */
+    max-width: 45%; 
     margin-top: 0;
+    
 }
 .code-container pre {
     margin: 0;
@@ -98,7 +125,7 @@ body {
     max-width: 1200px;
     width: 100%;
     padding: 20px;
-    margin: 0 auto; /* Center the entire section */
+    margin: 0 auto; 
     text-align: center;
 }
 
@@ -118,19 +145,18 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
     gap: 20px;
-    justify-content: center; /* Center align grid items */
-}
+    justify-content: center; }
 
 .card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center; /* Center text in each card */
+    text-align: center; 
 }
 
 .card img {
-    width: 50px; /* Slightly larger for better visibility */
+    width: 50px; 
     height: 50px;
     margin-bottom: 20px;
 }
@@ -168,10 +194,10 @@ body {
         font-size: 2rem;
     }
     .hero-text {
-        max-width: 100%; /* Full width for smaller devices */
+        max-width: 100%; 
     }
     .code-container {
-        max-width: 100%; /* Full width for smaller devices */
+        max-width: 100%;
     }
 }
 
@@ -185,12 +211,36 @@ body {
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
+        max-height: 0;
+        overflow: hidden;
     }
     .navbar a {
         margin: 10px 0;
     }
+
+    .navbar .nav-links a {
+        margin: 10px 0;
+        width: 100%; 
+        text-align: left; 
+        padding: 10px 0;
+    }
+
+
+    .navbar .toggle-button {
+        display: block; 
+    }
+
+    .navbar .nav-links.open {
+        max-height: 500px;
+    }
+
+
+
+
+
+
     .hero {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         text-align: center;
     }
     .hero h1 {
@@ -205,7 +255,7 @@ body {
     }
     .hero-text,
     .code-container {
-        max-width: 100%; /* Full width for smaller devices */
+        max-width: 100%; 
     }
 }
 
@@ -224,7 +274,7 @@ body {
 /* Responsive Design for Why Join Section */
 @media (max-width: 768px) {
     .card-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 20px; /* Maintain spacing between cards */
+        grid-template-columns: 1fr; 
+        gap: 20px; 
     }
 }
