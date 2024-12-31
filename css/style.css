@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-weight: 500;
+}
+.navbar a.join-us {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.navbar .nav-links {
+    display: flex;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(to top, #2C5ED8 0%, #1F44B5 100%);
+    color: white;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center; /* Align items closer */
+    align-items: center;
+   gap: 20px; /* Space between text and code container */
+    flex-wrap: wrap;
+}
+.hero-text {
+    max-width: 45%; /* Reduced width for better alignment */
+    margin-bottom: 0;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.hero .buttons {
+    display: flex;
+    gap: 15px;
+}
+.hero .buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.hero .buttons a.explore-more {
+    background-color: white;
+    color: #007bff;
+}
+.hero .buttons a.join-now {
+    border: 2px solid white;
+    color: white;
+}
+.hero .buttons a:hover {
+    opacity: 0.9;
+}
+
+/* Code Container */
+.code-container {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0.1, 0, 0.1);
+    max-width: 45%; /* Reduced width for better alignment */
+    margin-top: 0;
+}
+.code-container pre {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+
+/* Why Join Section */
+.whyjoin {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto; /* Center the entire section */
+    text-align: center;
+}
+
+#whyjoinh1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#whyjoinp {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    justify-content: center; /* Center align grid items */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center; /* Center text in each card */
+}
+
+.card img {
+    width: 50px; /* Slightly larger for better visibility */
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero-text {
+        max-width: 100%; /* Full width for smaller devices */
+    }
+    .code-container {
+        max-width: 100%; /* Full width for smaller devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-center;
+        padding: 20px;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .navbar a {
+        margin: 10px 0;
+    }
+    .hero {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-text,
+    .code-container {
+        max-width: 100%; /* Full width for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .code-container pre {
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design for Why Join Section */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px; /* Maintain spacing between cards */
+    }
+}
