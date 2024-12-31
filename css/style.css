@@ -22,8 +22,20 @@ body {
 }
 .navbar .active {
     color: #007bff;
+    border-radius: 5px;
+    padding: 7px 20px;
+    background-color: #f8f9fa;
+    border: #007bff 2px solid;
     display: block;
     background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.navbar .active :hover {
+    color: #fff;
+
+    background-color: #007bff;
+    
 }
 
 .navbar a.join-us {
@@ -41,6 +53,7 @@ body {
 
 .navbar .toggle-button {
     display: none;
+    
     align-items: center;
     transition: max-height 0.3s ease-in-out;
     
@@ -70,7 +83,7 @@ body {
     justify-content: center; 
     align-items: center;
    gap: 20px; 
-    flex-wrap: wrap;
+    
 }
 .hero-text {
     max-width: 45%; 
@@ -232,6 +245,11 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+.footer .social-icons {
+    display: flex;
+    gap: 10px;
+    
+}
 .footer .social-icons a {
     margin-right: 10px;
     color: #d1d1e9;
@@ -279,16 +297,19 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-center;
+        
+        flex-direction: row;
+        align-items: center;
         padding: 20px;
     }
     .navbar .nav-links {
         flex-direction: column;
         width: 100%;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         max-height: 0;
         overflow: hidden;
+        
     }
     .navbar a {
         margin: 10px 0;
@@ -297,13 +318,14 @@ body {
     .navbar .nav-links a {
         margin: 10px 0;
         width: 100%; 
-        text-align: left; 
+        text-align: center; 
         padding: 10px 0;
     }
 
 
     .navbar .toggle-button {
         display: block; 
+        align-items: first baseline;
     }
 
     .navbar .nav-links.open {
@@ -333,16 +355,30 @@ body {
     .code-container {
         max-width: 100%; 
     }
+
+    .card-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+
     .footer {
-        flex-direction:row;
-        text-align: flex-start;
+        flex-direction:column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .footer .social-icons {
         justify-content: center;
     }
+
     .footer div {
         margin: 20px 0;
+        
     }
 }
-
+/*
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.5rem;
@@ -355,10 +391,4 @@ body {
     }
 }
 
-/* Responsive Design for Why Join Section */
-@media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: 1fr; 
-        gap: 20px; 
-    }
-}
+
