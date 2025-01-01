@@ -1,0 +1,238 @@
+
+
+.event{
+    max-width: 1200px;
+    
+    
+     /* padding: 20px;  */
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  #event-h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  #event-p {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+  }
+  
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* margin-bottom: 40px; */
+    margin-top: 20px; 
+  }
+  
+  .event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    text-align: left;
+    height: 100%;
+    /* margin-bottom: 30px; */
+    position: relative;
+   
+   
+    transition: transform 0.3s ease;
+  }
+  
+  .event-card img {
+   width: 100%;
+  border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .tags{
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: flex-start;
+    display: flex;
+  }
+  
+  .tags .tag{
+    display: inline-block;
+    background-color: #58a9ff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+  
+  .tags .date{
+    font-size: 0.875rem;
+    color: #6c757d;
+    text-align: right;
+  }
+  
+  
+  .seminar{
+  justify-content: space-between;
+    margin: 10px 0;
+    align-items: flex-start;
+    display: flex;
+  }
+  
+  .seminar .time,
+  .seminar .venue{
+  font-size: 0.875rem;
+    color: #6c757d;
+    text-align: right;
+  
+  }
+  
+  .event-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  transition: color 0.3s ease;
+  text-align: left;
+  }
+  
+  .event-card p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    text-align: left;
+  }
+  
+  .event-buttons{
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  .event-buttons a{
+  flex: 1;
+    display: inline-block;
+    font-size: 0.875rem;
+    background-color: #fff;
+    color: #007bff;
+    text-align: flex-start;
+    
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: #007bff 1px solid;
+    text-decoration: none;
+    /* margin-right: 10px;  */
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  .event-buttons a:hover{
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .event-card img:hover {
+    transform: scale(1.1);
+  }
+  
+  .event-card h3:hover,
+  .event-card p:hover{
+    color: #007bff;
+  }
+  
+  @media (max-width: 1024px) {
+    .event-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    #event-h1 {
+      font-size: 2rem;
+    }
+  
+    #event-p {
+      font-size: 1rem;
+    }
+  
+    .event-card h3 {
+      font-size: 1.25rem;
+    }
+  
+    .event-card p {
+      font-size: 0.9rem;
+    }
+  
+    .event-buttons a {
+      font-size: 0.8rem;
+      padding: 8px 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .event-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    #event-h1 {
+      font-size: 1.8rem;
+    }
+  
+    #event-p {
+      font-size: 0.9rem;
+    }
+  
+    .event-card {
+      text-align: center;
+    }
+  
+    .tags {
+      justify-content: center;
+    }
+  
+    .event-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .event-card p {
+      font-size: 0.85rem;
+    }
+  
+    .event-buttons a {
+      font-size: 0.75rem;
+      padding: 6px 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #event-h1 {
+      font-size: 1.5rem;
+    }
+  
+    #event-p {
+      font-size: 0.8rem;
+    }
+  
+    .event-card h3 {
+      font-size: 1rem;
+    }
+  
+    .event-card p {
+      font-size: 0.8rem;
+    }
+  
+    .buttons a {
+      font-size: 0.7rem;
+      padding: 5px 8px;
+    }
+  }

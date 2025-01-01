@@ -139,19 +139,8 @@
 
 
 
-
-
-
-
-
-
-/* events */
-
-
-.event{
+.event {
   max-width: 1200px;
-  
-  /* padding: 20px; */
   margin: 0 auto;
   text-align: center;
   padding-bottom: 20px;
@@ -172,34 +161,38 @@
 .event-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px; 
+  margin-top: 20px;
 }
 
 .event-card {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  background-color: #f8f9fa;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px; 
-  text-align: center;
- 
- 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: left;
+  height: 100%;
+  position: relative; 
   transition: transform 0.3s ease;
 }
 
 .event-card img {
- width: 100%;
-border-radius: 10px 10px 0 0;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
   transition: transform 0.3s ease;
 }
 
-.tags{
-  justify-content: space-between;
-  margin: 10px 0;
+.tags {
+  margin: 10px 0 15px 0; 
   align-items: flex-start;
   display: flex;
+  justify-content: space-between;
 }
 
-.tags .tag{
+.tags .tag {
   display: inline-block;
   background-color: #58a9ff;
   color: #fff;
@@ -207,48 +200,53 @@ border-radius: 10px 10px 0 0;
   border-radius: 5px;
   margin-right: 5px;
   font-size: 0.875rem;
-  text-align: left;
 }
 
-.tags .date{
+.tags .date {
   font-size: 0.875rem;
   color: #6c757d;
-  text-align: right;
 }
 
 .event-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333;
   margin-bottom: 10px;
-transition: color 0.3s ease;
-text-align: left;
+  text-align: left;
+  transition: color 0.3s ease;
 }
 
 .event-card p {
   font-size: 1rem;
   color: #6c757d;
-  margin-bottom: 15px;
-  transition: color 0.3s ease;
+  margin-bottom: 40px;
   text-align: left;
+  transition: color 0.3s ease;
 }
 
-.event-buttons a{
+.event-buttons {
+  display: flex;
+  gap: 10px;
+  position: absolute; 
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  margin-top: 50px;
+}
+
+.event-buttons a {
+  flex: 1; 
   display: inline-block;
   font-size: 0.875rem;
   background-color: #fff;
   color: #007bff;
-  text-align: flex-start;
-  
   padding: 10px 15px;
   border-radius: 5px;
-  border: #007bff 1px solid;
+  border: 1px solid #007bff;
   text-decoration: none;
-  margin-right: 10px;
   transition: background-color 0.3s ease;
-
 }
 
-.event-buttons a:hover{
+.event-buttons a:hover {
   background-color: #007bff;
   color: #fff;
 }
@@ -262,14 +260,15 @@ text-align: left;
 }
 
 .event-card h3:hover,
-.event-card p:hover{
+.event-card p:hover {
   color: #007bff;
 }
 
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .event-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
   }
 
   #event-h1 {
@@ -297,6 +296,7 @@ text-align: left;
 @media (max-width: 768px) {
   .event-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   #event-h1 {
@@ -351,3 +351,5 @@ text-align: left;
     padding: 5px 8px;
   }
 }
+
+
