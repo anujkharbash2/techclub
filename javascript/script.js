@@ -28,6 +28,9 @@
         })
           .then(() => console.log("Form successfully submitted"))
           .catch(error => alert(error));
+          
+            window.location.href = '/contactus.html';
+
       };
       
       document.querySelector("form").addEventListener("submit", handleSubmit);
