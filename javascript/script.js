@@ -9,11 +9,11 @@
     });
 
 
-    // function handleSubmit(event) {
-    //     event.preventDefault(); // Prevent default form submission
-    //     alert('Your message has been sent successfully!'); // Show alert to user
-    //     window.location.href = '/contactus.html'; // Redirect to homepage
-    // }
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission
+        alert('Your message has been sent successfully!'); // Show alert to user
+        window.location.href = '/contactus.html'; // Redirect to homepage
+    }
 
     // const handleSubmit = event => {
     //     event.preventDefault();
