@@ -9,11 +9,11 @@
     });
 
 
-    function handleSubmit(event) {
-        event.preventDefault(); // Prevent default form submission
-        alert('Your message has been sent successfully!'); // Show alert to user
-        window.location.href = '/contactus.html'; 
-    }
+    // function handleSubmit(event) {
+    //     event.preventDefault(); // Prevent default form submission
+    //     alert('Your message has been sent successfully!'); // Show alert to user
+    //     window.location.href = '/contactus.html'; 
+    // }
 
     const handleSubmit = event => {
         event.preventDefault();
