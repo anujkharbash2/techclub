@@ -12,22 +12,22 @@
     function handleSubmit(event) {
         event.preventDefault(); // Prevent default form submission
         alert('Your message has been sent successfully!'); // Show alert to user
-        window.location.href = '/contactus.html'; // Redirect to homepage
+        window.location.href = '/contactus.html'; 
     }
 
-    // const handleSubmit = event => {
-    //     event.preventDefault();
+    const handleSubmit = event => {
+        event.preventDefault();
       
-    //     const myForm = event.target;
-    //     const formData = new FormData(myForm);
+        const myForm = event.target;
+        const formData = new FormData(myForm);
       
-    //     fetch("/", {
-    //       method: "POST",
-    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //       body: new URLSearchParams(formData).toString()
-    //     })
-    //       .then(() => console.log("Form successfully submitted"))
-    //       .catch(error => alert(error));
-    //   };
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+          .then(() => console.log("Form successfully submitted"))
+          .catch(error => alert(error));
+      };
       
-    //   document.querySelector("form").addEventListener("submit", handleSubmit);
+      document.querySelector("form").addEventListener("submit", handleSubmit);
