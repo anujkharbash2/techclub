@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,8 +30,8 @@
 
 
 
-    <h1 id="event-h1">Contact Us</h1>
-    <p id="event-p">Feel free to reach out to us with any questions or concerns.</p>
+    <h1 id="event-h1">Volunteer with us</h1>
+    <p id="event-p">If you're interested in volunteering, please fill out the form below and we'll get in touch with you soon.</p>
   
     <div class="contactus">
         <form class="form-contactus" name="contact" method="POST" data-netlify="true">
@@ -40,12 +44,17 @@
                 <input type="email" id="email" name="email" placeholder="anujkumar@students.sau.ac.in" required>
             </div>
             <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                <label for="mobile">Mobile No.</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="+911232467890" required>
             </div>
             <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                <label for="course">Course and Year</label>
+                <input type="text" id="course" name="course" placeholder="B.Tech CSE 1st Year" required>
+            </div>
+           
+            <div class="form-group">
+            <label for="nationality">Nationality</label>
+            <input type="text" id="nationality" name="nationality" placeholder="Indian" required>
             </div>
             <input type="hidden" name="form-name" value="contact">
             <button class="contactus-button" type="submit">Send Message</button>
