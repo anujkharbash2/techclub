@@ -69,4 +69,24 @@
   
   // Attach the event listener to the form
   document.querySelector("form").addEventListener("submit", handleSubmit);
+
   
+
+
+
+
+
+
+
+
+// Select all buttons with the class 'alert-trigger'
+const alertButtons = document.querySelectorAll('.alert-trigger');
+
+// Add an event listener to each button
+alertButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        alert('Registration link is not available for this event.');
+    });
+});
+
