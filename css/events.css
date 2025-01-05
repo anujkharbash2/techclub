@@ -176,7 +176,12 @@
   }
 
   .tags {
-    justify-content: center;
+  
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    margin: 10px 0 15px 0;
+
   }
 
   .event-card h3 {

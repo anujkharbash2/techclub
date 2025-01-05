@@ -9,6 +9,20 @@
     margin: 20px auto;
     font-family: Arial, sans-serif;
 }
+#event-h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+   text-align: center;
+  }
+  
+  #event-p {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
 
 .form-contactus {
     padding: 30px;
