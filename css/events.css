@@ -222,17 +222,3 @@
 }
 
 
-
-.seminar{
-  justify-content: space-between;
-    margin: 10px 0;
-    align-items: flex-start;
-    display: flex;
-}
-
-.seminar .time,
-.seminar .venue{
-  font-size: 0.875rem;
-    color: #6c757d;
-    text-align: right;
-}
